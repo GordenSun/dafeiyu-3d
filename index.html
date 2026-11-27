@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+<title>大肥鱼 3D 互动小屋</title>
+<meta name="description" content="用 Tripo 3D 做的大肥鱼互动小屋：眼睛跟着鼠标转、摸头挠痒、喂大白饭、换装、跳舞唱歌。">
+<meta property="og:title" content="大肥鱼 3D 互动小屋">
+<meta property="og:description" content="摸摸头、戳戳肚子、喂一碗大白饭，和大肥鱼一起玩吧！">
+<meta property="og:image" content="assets/cover.jpg">
+<link rel="icon" href="assets/icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="sea"><div class="ray r1"></div><div class="ray r2"></div><div class="ray r3"></div></div>
+<canvas id="c"></canvas>
+
+<div id="bubble" class="hide"><span id="bubbleText"></span></div>
+
+<header id="title">
+  <div class="logo">大肥鱼<b>3D</b>互动小屋</div>
+  <div class="sub">Made with Tripo 3D · 眼睛会跟着你转哦</div>
+</header>
+
+<div id="toolbar">
+  <button id="btnMusic" class="round" title="背景音乐">音乐</button>
+  <button id="btnAuto" class="round" title="自动表演">表演</button>
+  <button id="btnPhoto" class="round" title="拍照">拍照</button>
+  <button id="btnReset" class="round" title="回到正面">正面</button>
+</div>
+
+<aside id="panel">
+  <nav id="tabs">
+    <button data-tab="act" class="on">动作</button>
+    <button data-tab="exp">表情</button>
+    <button data-tab="outfit">换装</button>
+    <button data-tab="prop">道具</button>
+  </nav>
+  <div class="page on" id="tab-act"></div>
+  <div class="page" id="tab-exp"></div>
+  <div class="page" id="tab-outfit"></div>
+  <div class="page" id="tab-prop"></div>
+</aside>
+
+<div id="hint">拖动旋转 · 滚轮 / 双指缩放 · 点点她的头、肚子、尾巴、鳍和裙子</div>
+<div id="toast" class="hide"></div>
+
+<div id="loader">
+  <div class="card">
+    <img src="assets/icon.png" alt="" class="avatar">
+    <h1>大肥鱼 3D 互动小屋</h1>
+    <p class="tip">模型、23 段动作、4 套衣服都由 Tripo 3D 生成</p>
+    <div class="bar"><i id="barFill"></i></div>
+    <p id="loadText">正在游进来…</p>
+    <button id="btnStart" class="hide">点我进入（会有声音）</button>
+  </div>
+</div>
+
+<script type="module" src="app.js?v=11280003"></script>
+</body>
+</html>
